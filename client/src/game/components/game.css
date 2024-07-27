@@ -1,0 +1,74 @@
+/* Game.css */
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.bottle {
+    position: absolute;
+    width: 150px; /* Adjusted size */
+    height: 300px; /* Adjusted size */
+    background: url('./glass.bottlepng.jpeg') no-repeat center center;
+    background-size: contain;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 300px; /* Adjusted to match height */
+    cursor: pointer;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: calc(100% - 100px); /* Adjusted to match container height */
+    }
+}
+
+.bottle .question {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+}
+
+.bottle-input {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+
+.game-over {
+    text-align: center;
+    padding: 20px;
+}
+
+.game-over button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
